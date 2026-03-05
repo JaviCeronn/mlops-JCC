@@ -1,0 +1,10 @@
+[
+  {
+    "version": "v1.0-base",
+    "trained_at": "2026-03-05T11:08:53.309556Z",
+    "accuracy": 0.9667,
+    "n_training_samples": 120,
+    "algorithm": "LogisticRegression",
+    "source": "bootstrap (iris dataset completo)"
+  }
+]
