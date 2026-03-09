@@ -1,0 +1,11 @@
+=== LogisticRegression - Classification Report (Validacion) ===
+Mejores parametros: {'C': '0.01', 'penalty': 'l2', 'solver': 'saga', 'model_type': 'LogisticRegression', 'grid_search_scoring': 'recall', 'cv_folds': '5', 'class_weight': 'balanced'}
+
+              precision    recall  f1-score   support
+
+ No Diabetes       0.88      0.77      0.82       100
+    Diabetes       0.65      0.80      0.72        54
+
+    accuracy                           0.78       154
+   macro avg       0.76      0.78      0.77       154
+weighted avg       0.80      0.78      0.78       154

@@ -1,0 +1,11 @@
+=== GradientBoosting - Classification Report (Validacion) ===
+Mejores parametros: {'learning_rate': '0.05', 'max_depth': '5', 'n_estimators': '200', 'subsample': '0.8', 'model_type': 'GradientBoosting', 'grid_search_scoring': 'recall', 'cv_folds': '5', 'class_weight': 'balanced'}
+
+              precision    recall  f1-score   support
+
+ No Diabetes       1.00      1.00      1.00       100
+    Diabetes       1.00      1.00      1.00        54
+
+    accuracy                           1.00       154
+   macro avg       1.00      1.00      1.00       154
+weighted avg       1.00      1.00      1.00       154

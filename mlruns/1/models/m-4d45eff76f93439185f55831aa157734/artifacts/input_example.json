@@ -1,0 +1,1 @@
+{"columns": ["Pregnancies", "Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age"], "data": [[1, 90, 62, 12, 43, 27.2, 0.58, 24], [5, 126, 78, 27, 22, 29.6, 0.439, 40], [2, 105, 58, 40, 94, 34.9, 0.225, 25]]}

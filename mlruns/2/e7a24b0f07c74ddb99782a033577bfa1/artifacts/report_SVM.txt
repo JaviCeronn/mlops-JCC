@@ -1,0 +1,11 @@
+=== SVM - Classification Report (Validacion) ===
+Mejores parametros: {'C': '0.1', 'gamma': 'scale', 'kernel': 'rbf', 'model_type': 'SVM', 'grid_search_scoring': 'recall', 'cv_folds': '5', 'class_weight': 'balanced'}
+
+              precision    recall  f1-score   support
+
+ No Diabetes       0.91      0.69      0.78       100
+    Diabetes       0.60      0.87      0.71        54
+
+    accuracy                           0.75       154
+   macro avg       0.76      0.78      0.75       154
+weighted avg       0.80      0.75      0.76       154

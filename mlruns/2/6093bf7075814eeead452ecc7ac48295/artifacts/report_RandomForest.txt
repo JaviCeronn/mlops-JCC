@@ -1,0 +1,11 @@
+=== RandomForest - Classification Report (Validacion) ===
+Mejores parametros: {'max_depth': '5', 'min_samples_leaf': '2', 'min_samples_split': '2', 'n_estimators': '300', 'model_type': 'RandomForest', 'grid_search_scoring': 'recall', 'cv_folds': '5', 'class_weight': 'balanced'}
+
+              precision    recall  f1-score   support
+
+ No Diabetes       0.91      0.81      0.86       100
+    Diabetes       0.71      0.85      0.77        54
+
+    accuracy                           0.82       154
+   macro avg       0.81      0.83      0.82       154
+weighted avg       0.84      0.82      0.83       154
