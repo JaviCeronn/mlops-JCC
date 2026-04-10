@@ -1,0 +1,54 @@
+# =============================================================
+# LAB 6 — docker-compose.yml
+# Stack completo: backend FastAPI + frontend Gradio
+# =============================================================
+
+version: "3.9"
+
+services:
+
+  # ── Backend: API FastAPI de predicción ──────────────────────
+  backend:
+    build:
+      context: ./backend-iris
+      dockerfile: Dockerfile
+    container_name: iris-backend
+    ports:
+      - "8000:8000"
+    environment:
+      # Token de Hugging Face leído desde el fichero .env
+      - HF_TOKEN=${HF_TOKEN}
+      # Nivel de log de uvicorn (info | warning | error)
+      - LOG_LEVEL=info
+    restart: unless-stopped
+    # El health check está definido en el Dockerfile del backend.
+    # Docker Compose lo deberá integrar automáticamente para el estado "healthy".
+
+  # ── Frontend: interfaz de usuario Gradio ────────────────────
+  frontend:
+    build:
+      context: ./frontend-iris
+      dockerfile: Dockerfile
+    container_name: iris-frontend
+    ports:
+      - "7860:7860"
+    environment:
+      # CLAVE: dentro de la red interna de Docker Compose, el backend
+      # es accesible por su nombre de servicio ('backend'), NO por localhost.
+      # localhost dentro del contenedor frontend apunta al propio contenedor.
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+# ── Red interna ─────────────────────────────────────────────
+# Docker Compose crea automáticamente una red bridge privada para todos
+# los servicios de este fichero. Cada servicio es resoluble por su nombre
+# ('backend', 'frontend') como si fueran entradas DNS dentro de esa red.
+# No es necesario declararla explícitamente, pero se documenta aquí.
+networks:
+  default:
+    name: iris-network
+    driver: bridge

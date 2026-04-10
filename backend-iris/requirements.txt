@@ -1,0 +1,6 @@
+fastapi==0.115.12
+uvicorn==0.34.0
+scikit-learn==1.6.1
+joblib==1.4.2
+numpy==2.0.2
+huggingface-hub==0.30.1

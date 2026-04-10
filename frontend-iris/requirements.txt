@@ -1,0 +1,5 @@
+gradio==4.42.0
+huggingface-hub==0.24.7
+starlette<1.0.0
+requests
+

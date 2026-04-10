@@ -1,0 +1,9 @@
+__pycache__/
+flagged/
+
+# Secretos — nunca subir a Git
+.env
+
+# Modelos locales (se descargan desde HF Hub en runtime)
+*.joblib
+*.pkl

@@ -1,0 +1,20 @@
+══════════════════════════════════════
+  Verificación del Stack — LAB 6
+  Backend : http://127.0.0.1:8000
+  Frontend: http://127.0.0.1:7860
+══════════════════════════════════════
+
+[INFO]  Esperando a que el backend esté listo (timeout: 60s)...
+[OK]    Backend listo en 0s — modelo: v1.0-base
+[INFO]  Enviando predicción de prueba a POST http://127.0.0.1:8000/predict...
+[OK]    Predicción recibida → clase=0, especie=setosa
+
+  Payload enviado:    {"sepal_length": 5.1, "sepal_width": 3.5, "petal_length": 1.4, "petal_width": 0.2}
+  Respuesta completa: {"prediction":0,"species":"setosa","confidence":1.0}
+
+[INFO]  Comprobando disponibilidad del frontend en http://127.0.0.1:7860...
+[OK]    Frontend disponible (HTTP 200).
+
+══════════════════════════════════════
+  STACK OK
+══════════════════════════════════════
